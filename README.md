@@ -125,6 +125,15 @@ Use `size` if you need to control size state by yourself.
 
 The `position` property is used to set position of the component.
 Use `position` if you need to control size state by yourself.
+When `positionUnit` is `'%'`, `x` and `y` are in 0–100 (percentage of parent size).
+
+#### `positionUnit?: 'px' | '%';`
+
+When `'%'`, positioning uses percentages of the parent size instead of pixels:
+- `position` and `default` `x`/`y` are in 0–100.
+- `onDrag`, `onDragStop`, `onResize`, and `onResizeStop` receive position as 0–100.
+- `updatePosition()` expects `{ x, y }` in 0–100.
+Default is `'px'`.
 
 see, following example.
 
